@@ -4,6 +4,7 @@
 * Mainly to practice using [Node.js](https://nodejs.org/en/) and related libraries:
 
   - [Express](https://expressjs.com/)
+  - [MongoDB](https://www.mongodb.com/)
   - [Pug](https://pugjs.org/api/getting-started.html)
 
 # To run
@@ -14,7 +15,7 @@ brew services start mongodb
 
 # You may have to initialize and populate the database, I haven't tested this yet
 mongo
-# You will be dropped on to the MongoDB shell
+# You will be dropped in to the MongoDB shell
 # Basically execute what is on `./mongo.txt`
 > cls
 > show dbs
