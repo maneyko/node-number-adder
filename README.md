@@ -16,7 +16,7 @@ brew services start mongodb
 # You may have to initialize and populate the database, I haven't tested this yet
 mongo
 # You will be dropped in to the MongoDB shell
-# Basically execute what is on `./mongo.txt`
+# Basically execute what is in `./mongo.txt`
 > cls
 > show dbs
 > use numadder
@@ -29,8 +29,8 @@ mongo
 > db.numbers.insert({number: 'Three', value: 3, description: 'the third natural number'});
 > quit()
 
-npm start  # ^C to quit
-# Navigate to http://127.0.0.1:3000 in a web browser
+npm run dev  # ^C to quit
+# Navigate to http://127.0.0.1:3000 in a web browser (unless you set $PORT!)
 
 # after quitting...
 brew services stop mongodb

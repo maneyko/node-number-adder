@@ -32,9 +32,8 @@ app.use(bodyParser.json());
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-if (app.get('env') === 'development') {
+if (app.get('env') === 'development')
   app.locals.pretty = true;
-}
 
 // index
 app.get('/', (req, res) => {
