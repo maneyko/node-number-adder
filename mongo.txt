@@ -1,0 +1,10 @@
+cls
+show dbs
+use numadder
+db.createCollection('numbers');
+show collections
+
+db.numbers.insert({number: 'One', value: 1, description: 'the first natural number'});
+db.numbers.insert({number: 'Two', value: 2, description: 'the second natural number'});
+db.numbers.find().pretty();
+db.numbers.insert({number: 'Three', value: 3, description: 'the third natural number'});

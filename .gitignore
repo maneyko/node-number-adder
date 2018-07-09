@@ -3,3 +3,5 @@ package-lock.json
 *.swp
 
 .DS_Store
+
+test.js

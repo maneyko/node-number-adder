@@ -4,10 +4,11 @@ block content
     h1= title
     - var inputs = 6;
     - for (var i = 0; i < inputs; i++) {
-      input()
+      input.number
       br
     - }
     h4(id='output')
-    button(type='button' id='clear') Clear
-    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
-    script(src='/js/main.js')
+    div
+      button(type='button' id='clear') Clear
+        a(href='/numbers')
+          button(type='button') Numbers
