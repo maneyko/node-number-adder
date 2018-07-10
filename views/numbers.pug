@@ -1,26 +1,26 @@
 extends layout
 
 block content
-    h1 Numbers
-    a(href='/')
-      button(type='button') Back to Home
-    table.table
-      thead
-        tr
-          th Number
-          th Value
-          th Description
-          th Delete
-      tbody
-        each number, i in numbers
-          tr(id='id-' + number._id)
-            td= number.number
-            td= number.value
-            td= number.description
-            td: button.delete(type='button') x
-        tr
-          td: input.add
-          td: input.add
-          td: input.add
-          td
-            button(type='button' id='add') Add
+  include navbar.pug
+  br
+  h1 Numbers
+  table.table
+    thead
+      tr
+        th Number
+        th Value
+        th Description
+        th Delete
+    tbody
+      each number, i in numbers
+        tr(id='id-' + number._id)
+          td= number.number
+          td= number.value
+          td= number.description
+          td: button.delete(type='button') x
+      tr
+        td: input.add
+        td: input.add
+        td: input.add
+        td
+          button(type='button' id='add') Add
