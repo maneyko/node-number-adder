@@ -35,3 +35,6 @@ npm run dev  # ^C to quit
 # after quitting...
 brew services stop mongodb
 ```
+
+# TODO
+* Restore deleted row within 10 seconds of deletion

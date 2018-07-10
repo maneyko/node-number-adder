@@ -1,7 +1,7 @@
 function sumInputs() {
-  var sum = 0;
+  let sum = 0;
   $('input.number').each((index, value) => {
-    var i = parseInt(value.value);
+    let i = parseInt(value.value);
     if (! isNaN(i))
       sum += i;
   });
@@ -23,19 +23,19 @@ $($('#clear')[0]).click(() => {
 });
 
 $($('#add')[0]).click(() => {
-  var body = {
+  let body = {
     number: "",
     value: "",
     description: ""
   };
   $('input.add').each((index, value) => {
-    var value = value.value;
+    let val = value.value;
     if (index === 0)
-      body['number'] = value;
+      body['number'] = val;
     else if (index === 1)
-      body['value'] = value;
+      body['value'] = val;
     else if (index === 2)
-      body['description'] = value;
+      body['description'] = val;
   });
   for (key in body) {
     if (String(body[key]).length === 0)
@@ -44,7 +44,6 @@ $($('#add')[0]).click(() => {
   body['value'] = parseInt(body['value']);
   if (isNaN(body['value']))
     return;
-  console.log(body);
   $.ajax({
     type: 'POST',
     url: '/numbers',
@@ -63,9 +62,8 @@ $($('#add')[0]).click(() => {
 });
 
 $('.delete').click(function() {
-  var id = $(this).parent().parent().attr('id');
-  var id = id.replace('id-', '');
-  console.log(id);
+  let id = $(this).parent().parent().attr('id');
+  id = id.replace('id-', '');
   if (id.length != 0)
     $.ajax({
       url: `/numbers/${id}`,

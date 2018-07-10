@@ -1,6 +1,5 @@
 let mongoose = require('mongoose');
 
-// Numbers schema
 let numbersSchema = mongoose.Schema({
   number: {
     type: String,
@@ -16,4 +15,4 @@ let numbersSchema = mongoose.Schema({
   }
 });
 
-let Numbers = module.exports = mongoose.model('Numbers', numbersSchema);
+const Numbers = module.exports = mongoose.model('Numbers', numbersSchema);

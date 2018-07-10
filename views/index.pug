@@ -1,7 +1,9 @@
 extends layout
 
 block content
+  div(style='text-align: center')
     h1= title
+    br
     - var inputs = 6;
     - for (var i = 0; i < inputs; i++) {
       input.number
