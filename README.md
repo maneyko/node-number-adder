@@ -37,4 +37,5 @@ brew services stop mongodb
 ```
 
 # TODO
+* Click on row and direct to editing page
 * Restore deleted row within 10 seconds of deletion
